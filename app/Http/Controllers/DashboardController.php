@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\User;
 
 class DashboardController extends Controller
 {
@@ -12,7 +13,8 @@ class DashboardController extends Controller
     {
         $num_of_products = Product::all()->count();
         $num_of_categories = Category::all()->count();
+        $num_of_admins = User::where('role','Admin')->count();
 
-        return view('admin.dashboard', compact('num_of_products','num_of_categories'));
+        return view('admin.dashboard', compact('num_of_products','num_of_categories','num_of_admins'));
     }
 }

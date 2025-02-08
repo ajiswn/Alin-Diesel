@@ -52,13 +52,7 @@
 
       @auth
         <a class="btn-getstarted" href="{{url('/admin/dashboard')}}">Dasbor</a>
-        <form action="/auth/logout" method="POST">
-          @csrf
-          <button type="submit" class="btn btn-danger">Logout</button>
-        </form>
-      @else    
-        <a class="btn-getstarted" href="{{url('/auth/login')}}">Login</a>
-      @endauth
+      @endauth   
 
     </div>
   </header>
@@ -90,6 +84,9 @@
               <li><i class="bi bi-chevron-right"></i> <a href="/#about"> Tentang Kami</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="/#product"> Produk</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="/#contact"> Kontak</a></li>
+            @guest
+              <li><i class="bi bi-chevron-right"></i> <a href="/auth/login"> Login</a></li>
+            @endguest
             </ul>
           </div>
 

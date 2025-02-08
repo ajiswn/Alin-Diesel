@@ -198,6 +198,7 @@
                   {{-- <p>{{ 'Rp'.number_format($product->price, 0, ',','.') }}</p> --}}
                   <a href="{{ asset($product->images[0]->image_path) }}" title="{{ $product->name }}" data-gallery="product-gallery-category-{{ $product->category_id }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="/product-details/{{ $product->id }}" title="Detail Produk" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="https://wa.me/{{ $setting->whatsapp }}?text=Halo%20saya%20ingin%20pesan%20produk%20{{ $product->name }}" title="Pesan Produk" class="whatsapp-link" target="_blank"><i class="bi bi-whatsapp"></i></a>
                 </div>
               </div><!-- End Product Item -->  
             @endforeach  

@@ -70,8 +70,6 @@
                 <h3>Informasi Produk</h3>
                 <ul>
                   <li><strong>Kategori</strong>: {{ $product->category->name }}</li>
-                  <li><strong>Harga</strong>: {{ 'Rp'.number_format($product->price, 0, ',', '.') }}</li>
-                  <li><strong>Stok</strong>: {{ $product->stock }}</li>
                   <li><strong>Deskripsi</strong>:</li>
                 </ul>
                 {!! $product->description !!}
