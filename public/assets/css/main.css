@@ -860,6 +860,14 @@ section,
   color: var(--accent-color);
 }
 
+.hero .icon-box svg {
+  fill: var(--accent-color);
+}
+
+.hero .icon-box svg path {
+  fill: var(--accent-color);
+}
+
 .hero .icon-box h3 {
   font-weight: 700;
   margin: 10px 0 0 0;
