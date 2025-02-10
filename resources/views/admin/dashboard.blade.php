@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section('title','Dasbor Admin - Alin Diesel')
+@section('title','Dasbor Admin - '.$settings->name)
     
 @section('main')
   <div class="pagetitle">

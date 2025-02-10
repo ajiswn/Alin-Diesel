@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section('title','Tambah Kategori - Alin Diesel')
+@section('title','Tambah Kategori - '.$settings->name)
     
 @section('main')
 

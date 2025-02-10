@@ -1,6 +1,6 @@
-@extends('component.admin_layout')
+@extends('layout.error')
 
-@section('title', 'Akses Tidak Diizinkan 401 - Alin Diesel')
+@section('title', 'Akses Tidak Diizinkan 401 - '.$settings->name)
 
 @section('main')
 <div class="container">
@@ -8,9 +8,9 @@
         <h1>401</h1>
         <h2>Anda belum masuk atau tidak memiliki izin untuk mengakses halaman ini.</h2>
         <a class="btn" href="{{ url()->previous() }}">Kembali</a>
-        <img src="{{ asset('assets/img/errors/401.svg') }}" class="img-fluid py-5" alt="Akses Tidak Diizinkan">
+        <img src="{{ asset('assets/img/errors/401.svg') }}" class="img-fluid py-3" alt="Akses Tidak Diizinkan" style="max-height: 420px">
         <div class="credits">
-            <strong>Alin Diesel</strong>
+            <strong>{{ $settings->name }}</strong>
         </div>
     </section>
 </div>

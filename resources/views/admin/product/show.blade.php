@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section('title','Detail Produk - Alin Diesel')
+@section('title','Detail Produk - '.$settings->name)
     
 @section('main')
 
@@ -33,7 +33,7 @@
                 <div class="image-previews-container d-block">
                     @foreach ($product_images as $data)
                         <div class="box-image position-relative">
-                          <img src="{{ asset($data->image_path) }}" alt="Product Image">
+                          <img src="{{ asset($data->image_path) }}" alt="Product Image" class="rounded border border-black">
                         </div>
                     @endforeach
                 </div>

@@ -43,7 +43,7 @@
   
         <div class="container section-title" data-aos="fade-up">
           <h2>Tentang Kami</h2>
-          <p>Tentang Alin Diesel</p>
+          <p>Tentang {{ $settings->name }}</p>
         </div>
   
         <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -53,17 +53,42 @@
               <img src="{{ asset($setting->about_image) }}" class="img-fluid" alt="">
             </div>
             <div class="col-lg-8 order-2 order-lg-1 content">
-              <h3>Apa itu Alin Diesel?</h3>
+              <h3>Apa itu {{ $settings->name }}?</h3>
               <p class="fst-italic">
-                Alin Diesel adalah penyedia spare part untuk:
+                Selamat datang di Alien Diesel, mitra terbaik Anda dalam menyediakan:
               </p>
               <ul>
-                <li><i class="bi bi-check2-all"></i> <span>Spare part truck.</span></li>
-                <li><i class="bi bi-check2-all"></i> <span>Spare part.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Spare Part Truk.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Spare Part Alat Berat.</span></li>
               </ul>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+              <p class="text-justify">
+                Berbasis di Kasang Pudak, Kec. Kumpeh Ulu, Kabupaten Muaro Jambi, Jambi, kami hadir untuk memenuhi kebutuhan industri transportasi, konstruksi, dan pertambangan dengan menyediakan suku cadang berkualitas tinggi dan layanan terbaik.
+              </p>
+              <p class="text-justify">
+                Seiring dengan meningkatnya kebutuhan akan perawatan dan perbaikan kendaraan operasional, Alien Diesel berkomitmen untuk menjadi solusi utama bagi pelanggan yang mencari spare part berkualitas dengan harga bersaing. Kami memahami bahwa dalam dunia industri, keandalan kendaraan dan alat berat merupakan faktor utama dalam menjaga efisiensi operasional. Oleh karena itu, kami menyediakan berbagai jenis suku cadang yang terjamin kualitasnya, baik untuk truk pengangkut maupun alat berat.
+              </p>
+              <p class="text-justify">
+                Alien Diesel memiliki visi untuk menjadi penyedia suku cadang terkemuka di Indonesia dengan menghadirkan produk yang tahan lama, original, dan sesuai dengan spesifikasi teknis yang dibutuhkan pelanggan. Kami juga percaya bahwa pelayanan yang cepat dan responsif adalah kunci dalam membangun kepercayaan pelanggan. Oleh sebab itu, kami selalu siap memberikan konsultasi dan rekomendasi terbaik sesuai dengan kebutuhan industri Anda.
+              </p>
+            </div>
+          </div>
+
+          <div class="row gy-4 justify-content-center mt-3">
+            <div class="col-lg-12 order-1 order-lg-2 content">
+              <h3 class="text-center">Visi</h3>
+              <p class="text-center">
+                Menjadi <b>penyedia spare part truk dan alat berat terdepan di Indonesia,</b> yang dikenal dengan produk berkualitas tinggi, layanan prima, dan kepercayaan pelanggan yang kuat.
+              </p>
+              <h3 class="text-center">Misi</h3>
+              <ul>
+                <li class="text-justify"><i class="bi bi-check2-all"></i> <span><b>Menyediakan produk berkualitas</b> - Kami hanya menawarkan suku cadang yang teruji dan terpercaya untuk menjamin performa optimal kendaraan dan alat berat pelanggan.</span></li>
+                <li class="text-justify"><i class="bi bi-check2-all"></i> <span><b>Memberikan pelayanan terbaik</b> - Kepuasan pelanggan adalah prioritas kami. Tim kami siap memberikan solusi yang cepat, tepat, dan profesional.</span></li>
+                <li class="text-justify"><i class="bi bi-check2-all"></i> <span><b>Menjaga ketersediaan produk</b></span> - Kami memastikan bahwa setiap suku cadang yang dibutuhkan pelanggan tersedia dan siap dikirim dengan cepat.</li>
+                <li class="text-justify"><i class="bi bi-check2-all"></i> <span><b>Menjalin kemitraan jangka panjang</b> - Kami ingin tumbuh bersama pelanggan dengan membangun hubungan yang didasarkan pada kepercayaan dan kepuasan.</span></li>
+                <li class="text-justify"><i class="bi bi-check2-all"></i> <span><b>Mendukung efisiensi operasional pelanggan</b> - Dengan produk berkualitas dan layanan prima, kami membantu pelanggan menjaga kelangsungan bisnis mereka tanpa hambatan teknis.</span></li>
+              </ul>
+              <p class="text-justify">
+                Di Alien Diesel, kami bukan sekadar penjual suku cadang. Kami adalah mitra bisnis Anda dalam menjaga kinerja kendaraan dan alat berat agar tetap optimal, efisien, dan produktif. Hubungi kami sekarang dan temukan solusi terbaik untuk kebutuhan spare part Anda! 🚛🔩✨
               </p>
             </div>
           </div>
@@ -120,7 +145,7 @@
         <!-- Owner Title -->
         <div class="container section-title py-5" data-aos="fade-up">
           <h2>Owner</h2>
-          <p>Owner Alin Diesel</p>
+          <p>Owner {{ $settings->name }}</p>
         </div><!-- End Owner Title -->
   
         <!-- Owner Container -->
@@ -193,6 +218,7 @@
             @foreach ($products as $product)
               <div class="col-lg-4 col-md-6 product-item isotope-item filter-category-{{ $product->category_id }}">
                 <img src="{{ asset($product->images[0]->image_path) }}" class="img-fluid" alt="">
+                {{-- <img src="{{ asset($product->logo) }}" class="position-absolute top-0 end-0 me-4 mt-2" alt="" style="width: 72px"> --}}
                 <div class="product-info">
                   <h4>{{ $product->name }}</h4>
                   {{-- <p>{{ 'Rp'.number_format($product->price, 0, ',','.') }}</p> --}}
@@ -229,7 +255,7 @@
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Alamat</h3>
-                  <p>{{ $setting->address }}</p>
+                  <p>{!! $setting->address !!}</p>
                 </div>
               </div><!-- End Info Item -->
   

@@ -74,6 +74,13 @@
                 </div>
               </div>
               <div class="row mb-3">
+                <label for="email" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                <div class="col-md-8 col-lg-9">
+                  <input name="email" type="email" class="form-control @error('email') is-invalid @enderror" id="email" value="{{ $setting->email }}">
+                  @error('email') <div class="invalid-feedback">{{ $message }}</div>@enderror
+                </div>
+              </div>
+              <div class="row mb-3">
                 <label for="instagram" class="col-md-4 col-lg-3 col-form-label">Instagram</label>
                 <div class="col-md-8 col-lg-9">
                   <input name="instagram" type="text" class="form-control @error('instagram') is-invalid @enderror" id="instagram" value="{{ $setting->instagram }}">

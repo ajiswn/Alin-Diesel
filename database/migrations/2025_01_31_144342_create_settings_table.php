@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('owner');
             $table->string('address');
             $table->string('instagram');
+            $table->string('email');
             $table->string('owner_instagram');
             $table->string('whatsapp');
             $table->text('gmaps');

@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section('title','Admin - Alin Diesel')
+@section('title','Admin - '.$settings->name)
     
 @section('main')
 

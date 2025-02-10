@@ -18,6 +18,7 @@ class Setting extends Model
         'keywords',
         'owner',
         'address',
+        'email',
         'instagram',
         'owner_instagram',
         'whatsapp',

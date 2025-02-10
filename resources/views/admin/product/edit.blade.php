@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section('title','Edit Produk - Alin Diesel')
+@section('title','Edit Produk - '.$settings->name)
     
 @section('main')
 
@@ -85,7 +85,7 @@
                 <div class="image-previews-container d-block">
                     @foreach ($product_images as $data)
                         <div class="box-image position-relative">
-                          <img src="{{ asset($data->image_path) }}" alt="Product Image">
+                          <img src="{{ asset($data->image_path) }}" class="border border-black rounded" alt="Product Image">
                           <a href="{{ url('admin/product-images/'.$data->id) }}" class="btn btn-sm btn-danger position-absolute bottom-0 end-0 m-2"><i class="bi bi-trash"></i></a>
                         </div>
                     @endforeach
@@ -122,7 +122,7 @@
           const reader = new FileReader();
           reader.onload = function (e) {
             const productItem = document.createElement('div');
-            productItem.className = 'box-image';
+            productItem.className = 'box-image border border-black rounded';
 
             productItem.innerHTML = `<img src="${e.target.result}">`;
 

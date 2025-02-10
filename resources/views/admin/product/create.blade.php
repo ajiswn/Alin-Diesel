@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section('title','Tambah Produk - Alin Diesel')
+@section('title','Tambah Produk - '.$settings->name)
     
 @section('main')
 
@@ -105,7 +105,7 @@
           const reader = new FileReader();
           reader.onload = function (e) {
             const productItem = document.createElement('div');
-            productItem.className = 'box-image';
+            productItem.className = 'box-image rounded border border-black';
 
             productItem.innerHTML = `<img src="${e.target.result}">`;
 

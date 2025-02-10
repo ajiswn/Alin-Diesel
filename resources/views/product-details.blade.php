@@ -33,7 +33,7 @@
   
           <div class="row gy-4">
   
-            <div class="col-lg-8">
+            <div class="col-lg-6">
               <div class="product-details-slider swiper init-swiper">
   
                 <script type="application/json" class="swiper-config">
@@ -57,6 +57,7 @@
                   @foreach ($product->images as $image)
                     <div class="swiper-slide">
                       <img src="{{ asset($image->image_path) }}" alt="">
+                      {{-- <img src="{{ asset($product->logo) }}" class="position-absolute top-0 end-0 me-3 mt-3" alt="" style="width: 120px"> --}}
                     </div>
                   @endforeach
   
@@ -65,10 +66,11 @@
               </div>
             </div>
   
-            <div class="col-lg-4">
+            <div class="col-lg-6">
               <div class="product-info" data-aos="fade-up" data-aos-delay="200">
                 <h3>Informasi Produk</h3>
-                <ul>
+                <a href="https://wa.me/{{ $setting->whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20produk%20{{ $product->name }}" title="Pesan Produk" class="btn btn-success mb-3" target="_blank"><i class="bi bi-whatsapp"> Pesan via WhatsApp</i></a>
+                <ul class="list-info">
                   <li><strong>Kategori</strong>: {{ $product->category->name }}</li>
                   <li><strong>Deskripsi</strong>:</li>
                 </ul>

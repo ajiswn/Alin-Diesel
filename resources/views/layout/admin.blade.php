@@ -42,7 +42,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="/" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">Alin Diesel</span>
+        <span class="d-none d-lg-block">{{ $settings->name }}</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -145,9 +145,6 @@
   <footer id="footer" class="footer">
     <div class="copyright">
       &copy; Copyright <strong><span>{{ $settings->name }}</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
   </footer><!-- End Footer -->
 

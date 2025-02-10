@@ -24,6 +24,13 @@ class DatabaseSeeder extends Seeder
             'photo'     => 'assets/img/admin-photos/admin-1.jpg',
             'role'      => 'Super Admin',
         ]);
+        User::factory()->create([
+            'name'      => 'Admin 2',
+            'email'     => 'admin2@gmail.com',
+            'password'  => Hash::make('123'),
+            'photo'     => 'assets/img/admin-photos/admin-2.jpg',
+            'role'      => 'Admin',
+        ]);
 
         $this->call(CategorySeeder::class);
         $this->call(ProductSeeder::class);

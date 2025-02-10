@@ -1,6 +1,6 @@
-@extends('component.admin_layout')
+@extends('layout.error')
 
-@section('title', 'Kesalahan Server 500 - Alin Diesel')
+@section('title', 'Kesalahan Server 500 - '.$settings->name)
 
 @section('main')
 <div class="container">
@@ -8,9 +8,9 @@
         <h1>500</h1>
         <h2>Terjadi kesalahan pada server kami.</h2>
         <a class="btn" href="{{ url()->previous() }}">Kembali</a>
-        <img src="{{ asset('assets/img/errors/500.svg') }}" class="img-fluid py-5" alt="Kesalahan Server">
+        <img src="{{ asset('assets/img/errors/500.svg') }}" class="img-fluid py-5" alt="Kesalahan Server" style="max-height: 420px">
         <div class="credits">
-            <strong>Alin Diesel</strong>
+            <strong>{{ $settings->name }}</strong>
         </div>
     </section>
 </div>

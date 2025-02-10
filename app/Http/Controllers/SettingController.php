@@ -23,6 +23,7 @@ class SettingController extends Controller
             'keywords'          => 'required',
             'owner'             => 'required',
             'address'           => 'required|max:255',
+            'email'             => 'required|email',
             'instagram'         => 'required|max:255',
             'owner_instagram'   => 'required|max:255',
             'whatsapp'          => 'required|max:255',

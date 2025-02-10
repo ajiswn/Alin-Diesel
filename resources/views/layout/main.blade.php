@@ -71,9 +71,12 @@
               <span class="sitename">{{ $settings->name }}</span>
             </a>
             <div class="footer-contact pt-3">
-              <p>{{ $setting->address }}</p>
-              <p class="mt-3"><strong>Telepon:</strong> <span>+62 {{ $setting->whatsapp }}</span></p>
-              <p><strong>Instagram:</strong> <span>{{ '@'.$setting->instagram }}</span></p>
+              <p>{!! $setting->address !!}</p>
+              <p class="mt-3"><strong>Telepon:</strong> <span>+{{ $setting->whatsapp }}</span></p>
+              <p><strong>Email:</strong> <span>{{ '@'.$setting->email }}</span></p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href="https://www.instagram.com/{{ $setting->instagram }}/" target="_blank"><i class="bi bi-instagram"></i></a>
             </div>
           </div>
 
@@ -97,9 +100,6 @@
     <div class="copyright">
       <div class="container text-center">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">{{ $settings->name }}</strong> <span>All Rights Reserved</span></p>
-        <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
       </div>
     </div>
 
