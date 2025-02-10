@@ -143,13 +143,14 @@
         </div>
   
         <!-- Owner Title -->
-        <div class="container section-title py-5" data-aos="fade-up">
+        {{-- <div class="container section-title py-5" data-aos="fade-up">
           <h2>Owner</h2>
           <p>Owner {{ $settings->name }}</p>
-        </div><!-- End Owner Title -->
+        </div> --}}
+        <!-- End Owner Title -->
   
         <!-- Owner Container -->
-        <div class="container">
+        {{-- <div class="container">
   
           <div class="row gy-4 justify-content-center">
   
@@ -166,11 +167,9 @@
                   <span>Owner</span>
                 </div>
               </div>
-            </div><!-- End Owner -->
-            
+            </div>
           </div>
-  
-        </div>
+        </div> --}}
   
       </section><!-- /About Section -->
   
@@ -217,12 +216,20 @@
   
             @foreach ($products as $product)
               <div class="col-lg-4 col-md-6 product-item isotope-item filter-category-{{ $product->category_id }}">
-                <img src="{{ asset($product->images[0]->image_path) }}" class="img-fluid" alt="">
+                @if ($product->images->isNotEmpty())
+                <img src="{{ asset($product->images[0]->image_path) }}" class="img-fluid" alt=""> 
+                @else
+                <img src="{{ asset($product->logo) }}" class="img-fluid" alt=""> 
+                @endif
                 {{-- <img src="{{ asset($product->logo) }}" class="position-absolute top-0 end-0 me-4 mt-2" alt="" style="width: 72px"> --}}
                 <div class="product-info">
                   <h4>{{ $product->name }}</h4>
                   {{-- <p>{{ 'Rp'.number_format($product->price, 0, ',','.') }}</p> --}}
+                  @if ($product->images->isNotEmpty())
                   <a href="{{ asset($product->images[0]->image_path) }}" title="{{ $product->name }}" data-gallery="product-gallery-category-{{ $product->category_id }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  @else
+                  <a href="{{ asset($product->logo) }}" title="{{ $product->name }}" data-gallery="product-gallery-category-{{ $product->category_id }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  @endif
                   <a href="/product-details/{{ $product->id }}" title="Detail Produk" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   <a href="https://wa.me/{{ $setting->whatsapp }}?text=Halo%20saya%20ingin%20pesan%20produk%20{{ $product->name }}" title="Pesan Produk" class="whatsapp-link" target="_blank"><i class="bi bi-whatsapp"></i></a>
                 </div>

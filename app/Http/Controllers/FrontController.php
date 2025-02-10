@@ -12,7 +12,7 @@ class FrontController extends Controller
 {
     public function index()
     {
-        $products = Product::where('status','Aktif')->orderBy('created_at', 'desc')->get();
+        $products = Product::with('images')->where('status','Aktif')->orderBy('created_at', 'desc')->get();
         $categories = Category::all();
         $setting = Setting::first();
 

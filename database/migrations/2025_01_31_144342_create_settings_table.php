@@ -17,14 +17,14 @@ return new class extends Migration
             $table->string('slogan');
             $table->text('description');
             $table->string('keywords');
-            $table->string('owner');
+            // $table->string('owner');
             $table->string('address');
             $table->string('instagram');
             $table->string('email');
-            $table->string('owner_instagram');
+            // $table->string('owner_instagram');
             $table->string('whatsapp');
             $table->text('gmaps');
-            $table->string('owner_image');
+            // $table->string('owner_image');
             $table->string('logo_image');
             $table->string('hero_image');
             $table->string('about_image');

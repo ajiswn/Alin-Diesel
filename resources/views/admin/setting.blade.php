@@ -59,13 +59,13 @@
                   @error('keywords') <div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
               </div>
-              <div class="row mb-3">
+              {{-- <div class="row mb-3">
                 <label for="owner" class="col-md-4 col-lg-3 col-form-label">Nama Owner</label>
                 <div class="col-md-8 col-lg-9">
                   <input name="owner" type="text" class="form-control @error('owner') is-invalid @enderror" id="owner" value="{{ $setting->owner }}">
                   @error('owner') <div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
-              </div>
+              </div> --}}
               <div class="row mb-3">
                 <label for="address" class="col-md-4 col-lg-3 col-form-label">Alamat</label>
                 <div class="col-md-8 col-lg-9">
@@ -87,13 +87,13 @@
                   @error('instagram') <div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
               </div>
-              <div class="row mb-3">
+              {{-- <div class="row mb-3">
                 <label for="owner_instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Owner</label>
                 <div class="col-md-8 col-lg-9">
                   <input name="owner_instagram" type="text" class="form-control @error('owner_instagram') is-invalid @enderror" id="owner_instagram" value="{{ $setting->owner_instagram }}">
                   @error('owner_instagram') <div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
-              </div>
+              </div> --}}
               <div class="row mb-3">
                 <label for="whatsapp" class="col-md-4 col-lg-3 col-form-label">Whatsapp</label>
                 <div class="col-md-8 col-lg-9">
@@ -116,7 +116,7 @@
                   @error('gmaps') <div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
               </div>
-              <div class="row mb-3">
+              {{-- <div class="row mb-3">
                 <label for="owner_image" class="col-md-4 col-lg-3 col-form-label">Foto Owner</label>
                 <div class="col-md-8 col-lg-9">
                   <img src="{{ asset($setting->owner_image) }}" class="rounded old-logo" alt="Logo" height="100">
@@ -126,7 +126,7 @@
                       @error('owner_image') <div class="invalid-feedback">{{ $message }}</div>@enderror 
                   </div>
                 </div>
-              </div>  
+              </div>   --}}
               <div class="row mb-3">
                 <label for="logo_image" class="col-md-4 col-lg-3 col-form-label">Logo</label>
                 <div class="col-md-8 col-lg-9">

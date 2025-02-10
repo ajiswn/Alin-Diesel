@@ -21,11 +21,11 @@ class SettingController extends Controller
             'slogan'            => 'required|max:255',
             'description'       => 'required',
             'keywords'          => 'required',
-            'owner'             => 'required',
+            // 'owner'             => 'required',
             'address'           => 'required|max:255',
             'email'             => 'required|email',
             'instagram'         => 'required|max:255',
-            'owner_instagram'   => 'required|max:255',
+            // 'owner_instagram'   => 'required|max:255',
             'whatsapp'          => 'required|max:255',
             'gmaps'             => 'required',
         ]);
@@ -33,7 +33,7 @@ class SettingController extends Controller
         $settings = Setting::first();
 
         $imageFields = [
-            'owner_image' => 'owner',
+            // 'owner_image' => 'owner',
             'logo_image'  => 'logo',
             'hero_image'  => 'hero-bg',
             'about_image' => 'about'
